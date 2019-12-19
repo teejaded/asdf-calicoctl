@@ -5,7 +5,7 @@ before_script:
 script:
   - asdf plugin-add calicoctl ./
   - asdf list-all calicoctl
-  - asdf plugin-test calicoctl ./ 'calicoctl version'
+  - asdf plugin-test calicoctl ./ 'calicoctl --help'
 os:
   - osx
   - linux
