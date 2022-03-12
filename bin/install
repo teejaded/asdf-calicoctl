@@ -6,6 +6,10 @@ set -euo pipefail
 [ -z "${ASDF_INSTALL_VERSION+x}" ] && echo "ASDF_INSTALL_VERSION is required" && exit 1
 [ -z "${ASDF_INSTALL_PATH+x}" ] && echo "ASDF_INSTALL_PATH is required" && exit 1
 
+function ver {
+  printf "%03d%03d%03d%03d" $(echo "$1" | tr '.' ' ');
+}
+
 install() {
   local install_type=$1
   [ "$install_type" != "version" ] && echo "install type, $install_type, is not supported" && exit 1
@@ -16,8 +20,14 @@ install() {
   local bin_install_path="$install_path/bin"
   local bin_path="${bin_install_path}/calicoctl"
 
+  # Use the legacy repo if the version is before 3.22.1
+  base_url="https://github.com/projectcalico/calico"
+  if [ "$(ver $version)" -lt "$(ver 3.22.1)" ]; then
+    base_url="https://github.com/projectcalico/calicoctl"
+  fi
+
   local download_url
-  download_url="https://github.com/projectcalico/calicoctl/releases/download/v${version}/calicoctl-$(platform)-$(arch)"
+  download_url="${base_url}/releases/download/v${version}/calicoctl-$(platform)-$(arch)"
 
   mkdir -p "${bin_install_path}"
 
