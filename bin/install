@@ -17,7 +17,7 @@ install() {
   local bin_path="${bin_install_path}/calicoctl"
 
   local download_url
-  download_url="https://github.com/projectcalico/calicoctl/releases/download/v${version}/calicoctl-$(platform)-$(arch)"
+  download_url="https://github.com/projectcalico/calico/releases/download/v${version}/calicoctl-$(platform)-$(arch)"
 
   mkdir -p "${bin_install_path}"
 
