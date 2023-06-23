@@ -2,7 +2,7 @@
 
 # asdf-calicoctl [![CI](https://github.com/TheCubicleJockey/asdf-calicoctl/actions/workflows/workflow.yml/badge.svg?branch=main)](https://github.com/TheCubicleJockey/asdf-calicoctl/actions/workflows/workflow.yml) 
 
-[calicoctl](https://github.com/kubernetes-sigs/cri-tools) plugin for the [asdf version manager](https://asdf-vm.com).
+[calicoctl](https://github.com/projectcalico/calicoctl) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
