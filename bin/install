@@ -32,7 +32,7 @@ install() {
   mkdir -p "${bin_install_path}"
 
   echo "Downloading calicoctl from ${download_url}"
-  curl -sL "$download_url" -o "$bin_path"
+  curl -sSfL "$download_url" -o "$bin_path"
   chmod +x "$bin_path"
 }
 
@@ -41,8 +41,7 @@ platform() {
 }
 
 arch() {
-  [ ! "x86_64" = "$(uname -m)" ] && echo "architecture $(uname -m), is not supported" && exit 1
-  echo -n "amd64"
+  [ "x86_64" = "$(uname -m)" ] && echo -n "amd64" || uname -m
 }
 
 install "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
