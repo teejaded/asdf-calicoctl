@@ -1,0 +1,4 @@
+steps:
+  - uses: asdf-vm/actions/plugin-test@v2
+    with:
+      command: calicoctl --help

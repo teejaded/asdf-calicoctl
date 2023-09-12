@@ -1,5 +1,5 @@
 # asdf-calicoctl
-[![Build Status](https://travis-ci.org/teejaded/asdf-calicoctl.svg?branch=master)](https://travis-ci.org/teejaded/asdf-calicoctl)
+![Build Status](https://github.com/github/docs/actions/workflows/main.yml/)
 
 [Calicoctl](https://github.com/roboll/calicoctl) plugin for the [asdf](https://github.com/asdf-vm/asdf) version manager.
 
