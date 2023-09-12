@@ -1,5 +1,5 @@
 # asdf-calicoctl
-![Build Status](https://github.com/github/docs/actions/workflows/main.yml/)
+[![Build Status](https://github.com/teejaded/asdf-calicoctl/actions/workflows/test-plugin.yaml/badge.svg)](https://github.com/teejaded/asdf-calicoctl/actions/workflows/test-plugin.yaml)
 
 [Calicoctl](https://github.com/roboll/calicoctl) plugin for the [asdf](https://github.com/asdf-vm/asdf) version manager.
 
