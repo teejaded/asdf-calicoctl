@@ -16,7 +16,7 @@ function sort_versions() {
 # filter out versions before 3.22.1 -- the start of the calicoctl releases
 # in the new repo
 function filter_before() {
-  sed -n '/3\.22\.1/,$p'
+  sed -n '/3\.22\.[0-9]/,$p'
 }
 
 function get_tags() {
