@@ -7,7 +7,7 @@ set -euo pipefail
 [ -z "${ASDF_INSTALL_PATH+x}" ] && echo "ASDF_INSTALL_PATH is required" && exit 1
 
 function ver {
-  printf "%03d%03d%03d%03d" $(echo "$1" | tr '.' ' ');
+  printf "%03d%03d%03d%03d" $(echo "$1" | tr '.' ' ')
 }
 
 install() {
@@ -45,4 +45,3 @@ arch() {
 }
 
 install "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
-
