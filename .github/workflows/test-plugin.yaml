@@ -9,6 +9,6 @@ jobs:
     runs-on:
       - ubuntu-latest
     steps:
-      - uses: asdf-vm/actions/plugin-test@v2
+      - uses: asdf-vm/actions/plugin-test@v3
         with:
           command: calicoctl --help
